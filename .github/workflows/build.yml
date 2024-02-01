@@ -71,3 +71,8 @@ jobs:
         export ASEPRITE=$PWD/build/bin/aseprite
         cd tests
         $XVFB bash run-tests.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: artifact
+        path: path/to/artifact
