@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        os: [macos-latest]
         build_type: [RelWithDebInfo, Debug]
         enable_ui: [off]
         include:
@@ -75,4 +75,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: path/to/artifact
+        path: build
